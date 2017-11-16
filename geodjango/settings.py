@@ -15,9 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# GDAL, GEOS paths
-GDAL_LIBRARY_PATH = 'C:\\OSGeo4W\\bin\\gdal202.dll'
-GEOS_LIBRARY_PATH = 'C:\\OSGeo4W\\bin\\geos_c.dll'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -82,7 +80,9 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'geodjango',
         'USER': 'geo',
-        'PASSWORD': '061189god'
+        'PASSWORD': '061189god',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
